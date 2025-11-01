@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الإعجاب وعدم الإعجاب مع التعليقات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>قيم هذا المحتوى</h1>
+        
+        <div id="messageArea"></div>
+
+        <div class="vote-section">
+            <button class="vote-btn like-btn" id="likeBtn">
+                <span class="icon">👍</span>
+                <span class="count" id="likeCount">0</span>
+                <span>إعجاب</span>
+            </button>
+            <button class="vote-btn dislike-btn" id="dislikeBtn">
+                <span class="icon">👎</span>
+                <span class="count" id="dislikeCount">0</span>
+                <span>عدم إعجاب</span>
+            </button>
+        </div>
+
+        <div class="comment-section">
+            <h2>اترك تعليقاً</h2>
+            <div class="comment-form">
+                <input 
+                    type="text" 
+                    class="comment-input" 
+                    id="commentInput" 
+                    placeholder="شارك رأيك..."
+                    maxlength="200"
+                >
+                <button class="submit-btn" id="submitBtn">إرسال</button>
+            </div>
+
+            <h2>التعليقات</h2>
+            <div class="comments-list" id="commentsList">
+                <div class="no-comments">لا توجد تعليقات بعد. كن أول من يعلق!</div>
+            </div>
+        </div>
+
+        <button class="reset-btn" id="resetBtn">إعادة تعيين كل شيء</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
